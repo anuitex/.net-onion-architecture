@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
+    <Compile Remove="AggregateRoots\Interfaces\IAggregateRoot.cs" />
+    <Compile Remove="AggregateRoots\BaseEntity.cs" />
+    <Compile Remove="Extensions\DomainValidationException.cs" />
+    <Compile Remove="Entities\Interfaces\IAggregateRoot.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Cryptography.Internal" Version="2.2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Onion.Sample.Core\Onion.Sample.Core.csproj" />
+  </ItemGroup>
+</Project>
